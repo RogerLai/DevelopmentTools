@@ -1,0 +1,110 @@
+[W 150805 19:12:12 web:1811] 404 GET / (::1) 0.66ms
+[W 150805 19:12:12 web:1811] 404 GET /favicon.ico (::1) 0.45ms
+[I 150805 19:12:20 process:69] Request from: None GET /test NoToken
+[I 150805 19:12:20 process:78] Response to : None GET /test NoToken
+[I 150805 19:12:20 process:81] Response body is: {'text': 'hello', 'success': True, 'status_code': 0}
+[I 150805 19:12:20 web:1811] 200 GET /test (::1) 0.93ms
+[I 150809 11:44:26 process:69] Request from: None GET /redeploy NoToken
+[I 150809 11:44:26 process:78] Response to : None GET /redeploy NoToken
+[I 150809 11:44:26 process:81] Response body is: {'status_code': 0, 'message': 'hello', 'succeed': True, 'success': True}
+[I 150809 11:44:26 web:1811] 200 GET /redeploy (::1) 1.90ms
+[W 150809 11:44:26 web:1811] 404 GET /favicon.ico (::1) 0.58ms
+[I 150809 11:45:39 process:67] Request from: None GET /redeploy NoToken
+[I 150809 11:45:39 process:76] Response to : None GET /redeploy NoToken
+[I 150809 11:45:39 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 11:45:39 web:1811] 200 GET /redeploy (::1) 1.14ms
+[W 150809 15:32:52 web:1811] 404 GET / (::1) 1.04ms
+[W 150809 15:32:53 web:1811] 404 GET /favicon.ico (::1) 0.45ms
+[I 150809 15:32:59 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:32:59 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:32:59 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:32:59 web:1811] 200 GET /redeploy (::1) 0.71ms
+[W 150809 15:44:20 web:1811] 404 GET / (::1) 0.43ms
+[W 150809 15:44:24 web:1811] 404 GET / (::1) 0.35ms
+[W 150809 15:46:28 web:1811] 404 GET / (::1) 0.36ms
+[W 150809 15:46:31 web:1811] 404 GET / (::1) 0.41ms
+[I 150809 15:46:49 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:46:49 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:46:49 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:46:49 web:1811] 200 GET /redeploy (::1) 0.71ms
+[I 150809 15:47:44 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:47:44 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:47:44 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:47:44 web:1811] 200 GET /redeploy (::1) 0.81ms
+[I 150809 15:49:55 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:49:55 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:49:55 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:49:55 web:1811] 200 GET /redeploy (::1) 2.10ms
+[I 150809 15:49:55 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:49:55 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:49:55 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:49:55 web:1811] 200 GET /redeploy (::1) 1.19ms
+[I 150809 15:51:27 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:51:27 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:51:27 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:51:27 web:1811] 200 GET /redeploy (::1) 1.05ms
+[I 150809 15:51:27 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:51:27 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:51:27 process:79] Response body is: {'status_code': 0, 'execute_message': 'hello'}
+[I 150809 15:51:27 web:1811] 200 GET /redeploy (::1) 0.90ms
+[W 150812 14:03:23 web:1811] 404 GET / (::1) 1.00ms
+[W 150812 14:03:23 web:1811] 404 GET /favicon.ico (::1) 0.29ms
+[W 150812 14:05:07 web:1811] 404 GET / (::1) 0.54ms
+[I 150812 14:05:24 process:67] Request from: None GET /redeploy NoToken
+[E 150812 14:05:24 process:39] Traceback (most recent call last):
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/main/start_server.py", line 34, in <module>
+        tornado.ioloop.IOLoop.instance().start()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 837, in start
+        handler_func(fd_obj, events)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/stack_context.py", line 275, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/netutil.py", line 220, in accept_handler
+        callback(connection, address)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/tcpserver.py", line 255, in _handle_connection
+        self.handle_stream(stream, address)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 172, in handle_stream
+        conn.start_serving(self)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 661, in start_serving
+        self._serving_future = self._server_request_loop(delegate)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 674, in _server_request_loop
+        ret = yield conn.read_response(request_delegate)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 149, in read_response
+        return self._read_message(delegate)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 187, in wrapper
+        Runner(result, future, yielded)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 578, in __init__
+        self.run()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 633, in run
+        yielded = self.gen.send(value)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 234, in _read_message
+        delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 282, in finish
+        self.delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1884, in finish
+        self.execute()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1914, in execute
+        self.handler._execute(transforms, *self.path_args, **self.path_kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1332, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/controller/deploy.py", line 18, in get
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self)))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/common/process.py", line 31, in process_request
+        result = request_handler()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/controller/deploy.py", line 18, in <lambda>
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self)))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/controller/deploy.py", line 14, in get_handler
+        response = redeploy_office_converter.do_redeploy()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainer/src/model/redeploy_office_converter.py", line 18, in do_redeploy
+        p = Popen('%s\\maintain.bat' % SCRIPT_DIR)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 709, in __init__
+        errread, errwrite)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1326, in _execute_child
+        raise child_exception
+    OSError: [Errno 2] No such file or directory
+[I 150812 14:05:24 process:76] Response to : None GET /redeploy NoToken
+[I 150812 14:05:24 process:79] Response body is: {'status_code': 1, 'message': ''}
+[I 150812 14:05:24 web:1811] 200 GET /redeploy (::1) 29.12ms

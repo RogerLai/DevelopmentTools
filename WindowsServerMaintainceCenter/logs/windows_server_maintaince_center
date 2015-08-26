@@ -1,0 +1,239 @@
+[I 150809 12:11:22 process:67] Request from: None GET / NoToken
+[I 150809 12:11:22 web:1811] 200 GET / (::1) 4.13ms
+[W 150809 12:11:22 web:1811] 404 GET /css/style.css (::1) 0.47ms
+[W 150809 12:11:22 web:1811] 404 GET /js/jquery-1.8.3.js (::1) 0.57ms
+[W 150809 12:11:22 web:1811] 404 GET /js/sync_monitor.js (::1) 0.38ms
+[I 150809 12:13:25 process:67] Request from: None GET / NoToken
+[I 150809 12:13:25 web:1811] 200 GET / (::1) 3.19ms
+[I 150809 15:17:49 process:67] Request from: None GET / NoToken
+[I 150809 15:17:49 web:1811] 200 GET / (::1) 3.47ms
+[I 150809 15:18:56 process:67] Request from: None GET / NoToken
+[I 150809 15:18:56 web:1811] 200 GET / (::1) 2.89ms
+[I 150809 15:46:45 process:67] Request from: None GET / NoToken
+[I 150809 15:46:45 web:1811] 200 GET / (::1) 6.94ms
+[I 150809 15:46:49 process:67] Request from: None GET /redeploy NoToken
+[E 150809 15:46:49 process:39] Traceback (most recent call last):
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/main/start_server.py", line 34, in <module>
+        tornado.ioloop.IOLoop.instance().start()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 781, in start
+        self._run_callback(callback)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 565, in _run_callback
+        ret = callback()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/stack_context.py", line 275, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 708, in <lambda>
+        self.future, lambda f: self.run())
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 633, in run
+        yielded = self.gen.send(value)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 234, in _read_message
+        delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 282, in finish
+        self.delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1884, in finish
+        self.execute()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1914, in execute
+        self.handler._execute(transforms, *self.path_args, **self.path_kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1332, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in get
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/common/process.py", line 31, in process_request
+        result = request_handler()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in <lambda>
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 18, in get_handler
+        param_dict = redeploy_office_converter.do_reploy()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/model/redeploy_office_converter.py", line 20, in do_reploy
+        result['execute_results'].apppend(info)
+    AttributeError: 'list' object has no attribute 'apppend'
+[I 150809 15:46:49 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:46:49 process:79] Response body is: {'status_code': 1, 'message': "'list' object has no attribute 'apppend'"}
+[I 150809 15:46:49 web:1811] 200 GET /redeploy (::1) 13.25ms
+[I 150809 15:46:50 process:67] Request from: None GET / NoToken
+[I 150809 15:46:50 web:1811] 304 GET / (::1) 0.75ms
+[I 150809 15:47:34 process:67] Request from: None GET / NoToken
+[I 150809 15:47:34 web:1811] 304 GET / (::1) 0.91ms
+[I 150809 15:47:44 process:67] Request from: None GET /redeploy NoToken
+[E 150809 15:47:44 process:39] Traceback (most recent call last):
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/main/start_server.py", line 34, in <module>
+        tornado.ioloop.IOLoop.instance().start()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 781, in start
+        self._run_callback(callback)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 565, in _run_callback
+        ret = callback()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/stack_context.py", line 275, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 708, in <lambda>
+        self.future, lambda f: self.run())
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 633, in run
+        yielded = self.gen.send(value)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 234, in _read_message
+        delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 282, in finish
+        self.delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1884, in finish
+        self.execute()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1914, in execute
+        self.handler._execute(transforms, *self.path_args, **self.path_kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1332, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in get
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/common/process.py", line 31, in process_request
+        result = request_handler()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in <lambda>
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 18, in get_handler
+        param_dict = redeploy_office_converter.do_reploy()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/model/redeploy_office_converter.py", line 20, in do_reploy
+        result['execute_results'].apppend(info)
+    AttributeError: 'list' object has no attribute 'apppend'
+[I 150809 15:47:44 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:47:44 process:79] Response body is: {'status_code': 1, 'message': "'list' object has no attribute 'apppend'"}
+[I 150809 15:47:44 web:1811] 304 GET /redeploy (::1) 6.26ms
+[I 150809 15:48:43 process:67] Request from: None GET / NoToken
+[I 150809 15:48:43 web:1811] 304 GET / (::1) 4.30ms
+[I 150809 15:48:44 process:67] Request from: None GET /redeploy NoToken
+[E 150809 15:48:44 process:39] Traceback (most recent call last):
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/main/start_server.py", line 34, in <module>
+        tornado.ioloop.IOLoop.instance().start()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 781, in start
+        self._run_callback(callback)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 565, in _run_callback
+        ret = callback()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/stack_context.py", line 275, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 708, in <lambda>
+        self.future, lambda f: self.run())
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 633, in run
+        yielded = self.gen.send(value)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 234, in _read_message
+        delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 282, in finish
+        self.delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1884, in finish
+        self.execute()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1914, in execute
+        self.handler._execute(transforms, *self.path_args, **self.path_kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1332, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in get
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/common/process.py", line 31, in process_request
+        result = request_handler()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in <lambda>
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 18, in get_handler
+        param_dict = redeploy_office_converter.do_reploy()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/model/redeploy_office_converter.py", line 17, in do_reploy
+        info = json.load(urllib2.urlopen(server['url'], timeout=HTTP_REQUEST_TIMEOUT_IN_SECONDS))
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 127, in urlopen
+        return _opener.open(url, data, timeout)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 404, in open
+        response = self._open(req, data)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 422, in _open
+        '_open', req)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 382, in _call_chain
+        result = func(*args)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1214, in http_open
+        return self.do_open(httplib.HTTPConnection, req)
+      File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1184, in do_open
+        raise URLError(err)
+    URLError: <urlopen error [Errno 61] Connection refused>
+[I 150809 15:48:44 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:48:44 process:79] Response body is: {'status_code': 1, 'message': ''}
+[I 150809 15:48:44 web:1811] 200 GET /redeploy (::1) 14.82ms
+[I 150809 15:49:51 process:67] Request from: None GET / NoToken
+[I 150809 15:49:51 web:1811] 304 GET / (::1) 1.15ms
+[I 150809 15:49:55 process:67] Request from: None GET /redeploy NoToken
+[E 150809 15:49:55 process:39] Traceback (most recent call last):
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/main/start_server.py", line 34, in <module>
+        tornado.ioloop.IOLoop.instance().start()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 781, in start
+        self._run_callback(callback)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/ioloop.py", line 565, in _run_callback
+        ret = callback()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/stack_context.py", line 275, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 708, in <lambda>
+        self.future, lambda f: self.run())
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 633, in run
+        yielded = self.gen.send(value)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/http1connection.py", line 234, in _read_message
+        delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/httpserver.py", line 282, in finish
+        self.delegate.finish()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1884, in finish
+        self.execute()
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1914, in execute
+        self.handler._execute(transforms, *self.path_args, **self.path_kwargs)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/gen.py", line 175, in wrapper
+        yielded = next(result)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/web.py", line 1332, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in get
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/common/process.py", line 31, in process_request
+        result = request_handler()
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 24, in <lambda>
+        self.write(process.process_request(self.request, lambda: RedeployHandler.get_handler(self), 'html'))
+      File "/Users/rogerlai/Documents/workspace/WindowsServerMaintainceCenter/src/controller/deploy.py", line 20, in get_handler
+        response = loader.load("redeploy_result.html").generate(params = param_dict)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/template.py", line 343, in load
+        self.templates[name] = self._create_template(name)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/template.py", line 371, in _create_template
+        template = Template(f.read(), name=name, loader=self)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/template.py", line 236, in __init__
+        self.file = _File(self, _parse(reader, self))
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/template.py", line 837, in _parse
+        block_body = _parse(reader, template, operator, operator)
+      File "/Library/Python/2.7/site-packages/tornado-4.0.2-py2.7-macosx-10.9-intel.egg/tornado/template.py", line 708, in _parse
+        in_block)
+    ParseError: Missing {% end %} block for for
+[I 150809 15:49:55 process:76] Response to : None GET /redeploy NoToken
+[I 150809 15:49:55 process:79] Response body is: {'status_code': 1, 'message': 'Missing {% end %} block for for'}
+[I 150809 15:49:55 web:1811] 200 GET /redeploy (::1) 13.87ms
+[I 150809 15:51:25 process:67] Request from: None GET / NoToken
+[I 150809 15:51:25 web:1811] 304 GET / (::1) 4.18ms
+[I 150809 15:51:27 process:67] Request from: None GET /redeploy NoToken
+[I 150809 15:51:27 web:1811] 200 GET /redeploy (::1) 14.75ms
+[I 150809 17:02:16 process:67] Request from: None GET / NoToken
+[I 150809 17:02:16 web:1811] 304 GET / (::1) 5.19ms
+[I 150809 17:02:18 process:67] Request from: None GET /redeploy NoToken
+[I 150809 17:02:18 web:1811] 200 GET /redeploy (::1) 11.47ms
+[I 150809 17:03:01 process:67] Request from: None GET / NoToken
+[I 150809 17:03:01 web:1811] 304 GET / (::1) 2.96ms
+[I 150809 17:03:02 process:67] Request from: None GET /redeploy NoToken
+[I 150809 17:03:02 web:1811] 200 GET /redeploy (::1) 9.90ms
+[I 150810 10:42:03 process:67] Request from: None GET / NoToken
+[I 150810 10:42:03 web:1811] 304 GET / (::1) 4.14ms
+[W 150810 10:42:03 web:1811] 404 GET /favicon.ico (::1) 0.38ms
+[I 150810 10:42:31 process:67] Request from: None GET /redeploy NoToken
+[I 150810 10:42:31 web:1811] 304 GET /redeploy (::1) 8.04ms
+[I 150826 10:04:21 process:67] Request from: None GET / NoToken
+[I 150826 10:04:21 web:1811] 200 GET / (::1) 4.01ms
+[W 150826 10:04:21 web:1811] 404 GET /favicon.ico (::1) 0.54ms
+[I 150826 10:05:51 process:67] Request from: None GET / NoToken
+[I 150826 10:05:51 web:1811] 304 GET / (::1) 1.64ms
+[I 150826 10:05:56 process:67] Request from: None GET /redeploy NoToken
+[I 150826 10:05:56 web:1811] 200 GET /redeploy (::1) 456.18ms
+[I 150826 10:06:34 process:67] Request from: None GET / NoToken
+[I 150826 10:06:34 web:1811] 304 GET / (::1) 1.23ms
+[I 150826 10:19:45 process:67] Request from: None GET / NoToken
+[I 150826 10:19:45 web:1811] 304 GET / (::1) 3.06ms
+[I 150826 10:19:47 process:67] Request from: None GET /redeploy NoToken
+[I 150826 10:19:48 web:1811] 304 GET /redeploy (::1) 482.39ms
+[I 150826 10:30:05 process:67] Request from: None GET / NoToken
+[I 150826 10:30:05 web:1811] 304 GET / (::1) 16.68ms
+[I 150826 10:30:08 process:67] Request from: None GET /redeploy NoToken
+[I 150826 10:35:03 web:1811] 304 GET /redeploy (::1) 294607.36ms
+[I 150826 10:35:07 process:67] Request from: None GET / NoToken
+[I 150826 10:35:07 web:1811] 304 GET / (::1) 2.89ms
+[I 150826 10:35:09 process:67] Request from: None GET /redeploy NoToken
+[I 150826 10:35:22 web:1811] 200 GET /redeploy (::1) 12633.75ms

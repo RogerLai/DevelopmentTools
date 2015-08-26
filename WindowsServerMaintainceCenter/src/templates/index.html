@@ -1,0 +1,50 @@
+<!--[if IE]><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><![endif]-->
+<!--[if lte IE 6]><style type="text/css">.clearfix { height: 1%; }</style><![endif]-->
+<!--[if IE 7]><style type="text/css">.clearfix { display:inline-block; }</style><![endif]-->
+<html>
+<head>
+	<title>{% block title %}{{params.get('title')}}{% end %}</title>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="{{ params.get('static_host') + '/css/style.css' }}" type="text/css" media="screen, projection" />
+</head>
+<body>
+<div class="main">
+	<div id="content">
+		<div id="server_list">
+			<div class="center">
+				<div class="top_stat">Windows服务器信息</div>				
+				<table class="table">
+					<tr class="row">
+					  <td class="cell">节点类型</td>
+					  <td class="cell">节点地址</td>
+					</tr>
+				{% for server_info in params.get('server_list', []) %}
+					<tr class="row">
+				    	<td class="cell">{{ server_info.get('type') }}</td>
+				    	<td class="cell">{{ server_info.get('url') }}</td>
+				    </tr>
+				{% end %}
+				</table>    	
+			</div>
+		</div>
+		
+		<div id="deploy">
+			<div class="center">
+				<div class="search">
+					<span>节点类型: </span>
+					<select name="server_type">			  			
+				  	{% for server_type in params.get('server_type_list', []) %}	  	
+				  		<option value ="{{ server_type }}">{{ server_type }}</option>
+				  	{% end %}
+				  	<option value ="全部类型">全部类型</option>
+					<input type="button" value="重新部署" id="redeploy_btn"/>
+				</div>
+				<div id="deploy_result"></div>
+			</div>
+		</div>		
+	</div>
+</div>
+<script type="text/javascript" src="{{ params.get('static_host') + '/js/jquery-1.8.3.js' }}"></script>
+<script type="text/javascript" src="{{ params.get('static_host') + '/js/windows_maintaince.js' }}"></script>
+</body>
+</html>

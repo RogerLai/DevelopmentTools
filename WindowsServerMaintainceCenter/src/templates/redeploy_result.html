@@ -1,0 +1,25 @@
+<div class="center">
+	<div class="top_stat">部署结果</div>				
+	<table class="table">
+		<tr class="row">
+		  <td class="cell">类型</td>
+		  <td class="cell">地址</td>
+		  <td class="cell">结果</td>
+		  <td class="cell">消息</td>
+		</tr>
+	{% for item in params.get('execute_results', []) %}
+		<tr class="row">
+	    	<td class="cell">{{ item.get('type') }}</td>
+	    	<td class="cell">{{ item.get('url') }}</td>
+	    	{% if item.get('status_code') == 0 %}
+   				<td class="cell">成功</td>
+   			{% elif item.get('status_code') == 2 %}
+   				<td class="cell">无法访问</td>
+   			{% else %}
+   				<td class="cell">失败</td>
+   			{% end %}
+   			<td class="cell">{{ item.get('execute_message') }}</td>
+	    </tr>
+	{% end %}
+	</table>
+</div>
